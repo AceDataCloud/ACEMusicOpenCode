@@ -15,3 +15,14 @@ Requires OpenCode 2.0.26 or newer in the 2.x series. In OpenCode use `/connect` 
 ## First use
 
 Ask “List the ACE Music models and capabilities.” This only reads service information. To make a song, describe the idea or provide the title, lyrics and style. A successful song task returns two candidates. Uploading a reference and generating lyrics are separate billable actions. For a cover, supply one owned audio ID; for a mashup, two different compatible IDs. Keep the returned task ID and query it after reconnecting. [Pricing](https://platform.acedata.cloud/services/acemusic) · [MCP tool reference](https://platform.acedata.cloud/documents/mcp-acemusic)
+
+## Verify the packed plugin
+
+Run `npm test` for credential registration, rotation and revocation. To exercise the packaged plugin against the OpenCode 2.0.26 runtime with an empty credential store:
+
+```sh
+npm install --prefix /tmp/ace-music-opencode-host --no-save @opencode/cli@2.0.26
+OPENCODE_BIN=/tmp/ace-music-opencode-host/node_modules/.bin/opencode npm run test:e2e
+```
+
+The test packs this repository, starts an isolated loopback host, and checks that it registered the ACE Music skill and key/environment credential methods. The remote MCP stays disabled until the user provides a credential.

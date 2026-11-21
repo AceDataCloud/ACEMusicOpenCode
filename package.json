@@ -17,7 +17,8 @@
   ],
   "scripts": {
     "test": "node --test",
-    "check": "node --check index.js && node --check src/index.js && node --check src/plugin.js"
+    "check": "node --check index.js && node --check src/index.js && node --check src/plugin.js",
+    "test:e2e": "node scripts/verify-host.mjs"
   },
   "engines": {
     "node": ">=22"
