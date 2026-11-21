@@ -1,0 +1,53 @@
+{
+  "name": "@acedatacloud/opencode-acemusic",
+  "version": "0.1.0",
+  "description": "Create ACE Music songs and lyrics, upload reference audio, cover one owned track, blend two, and retrieve the original task.",
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./server": "./index.js"
+  },
+  "files": [
+    "index.js",
+    "src",
+    "skills",
+    "README.md",
+    "readme",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check index.js && node --check src/index.js && node --check src/plugin.js"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "keywords": [
+    "ace-music",
+    "acemusic",
+    "music",
+    "audio",
+    "lyrics",
+    "acedatacloud",
+    "opencode-plugin"
+  ],
+  "author": "Ace Data Cloud Dev <dev@acedata.cloud>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AceDataCloud/ACEMusicOpenCode.git"
+  },
+  "homepage": "https://github.com/AceDataCloud/ACEMusicOpenCode#readme",
+  "bugs": {
+    "url": "https://github.com/AceDataCloud/ACEMusicOpenCode/issues"
+  },
+  "peerDependencies": {
+    "@opencode/plugin": "^2.0.26"
+  },
+  "peerDependenciesMeta": {
+    "@opencode/plugin": {
+      "optional": true
+    }
+  },
+  "main": "./index.js"
+}
